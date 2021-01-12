@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'workers',
-    component: WorkersComponent
+    loadChildren: () =>
+      import('./workers/workers.module').then((m) => m.WorkersModule),
   }
 ];
 
