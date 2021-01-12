@@ -21,24 +21,24 @@
       "type": 0
     },
     {
-      "id": 3,
       "surname": "Sharonov",
       "name": "Ilya",
       "patronym": "Lvovich",
       "phone": "+79275454816",
       "email": "lion@mail.ru",
       "birthday": "12.01.2000",
-      "type": 2
+      "type": 2,
+      "id": 3
     },
     {
-      "id": 4,
       "surname": "Pavlikov",
       "name": "Akim",
-      "patronym": "Andreevich",
+      "patronym": "Andrevich",
       "phone": "+79275454817",
       "email": "sokolenokzr@mail.ru",
       "birthday": "21.05.1998",
-      "type": 3
+      "type": 3,
+      "id": 4
     }
   ]
 }

@@ -1,13 +1,14 @@
+<h1 class="ml-3 mt-2 mb-3">Список сотрудников</h1>
 <table class="table">
     <thead>
       <tr>
-        <th scope="col" [style.width]="'10%'">#</th>
-        <th scope="col" [style.width]="'15%'">Фамилия</th>
-        <th scope="col" [style.width]="'15%'">Имя</th>
-        <th scope="col" [style.width]="'15%'">Возраст</th>
-        <th scope="col" [style.width]="'15%'">Отдел</th>
-        <th scope="col" [style.width]="'20%'">
-            <button class="btn btn-primary">
+        <th class="align-middle" scope="col" [style.width]="'10%'">#</th>
+        <th class="align-middle" scope="col" [style.width]="'15%'">Фамилия</th>
+        <th class="align-middle" scope="col" [style.width]="'15%'">Имя</th>
+        <th class="align-middle" scope="col" [style.width]="'15%'">Возраст</th>
+        <th class="align-middle" scope="col" [style.width]="'15%'">Отдел</th>
+        <th class="align-middle" scope="col" [style.width]="'20%'">
+            <button class="btn btn-primary" (click)="onAddWorker()">
                 Добавить пользователя
             </button>
         </th>
@@ -21,8 +22,8 @@
         <td> {{getAge(worker.birthday)}} </td>
         <td> {{getDepartment(worker.type)}} </td>
         <td>
-            <button class="btn btn-primary mr-3">Изменить</button>
-            <button class="btn btn-danger ml-1">Удалить</button>
+            <button class="btn btn-primary mr-3" (click)="onEditWorker(worker.id)">Изменить</button>
+            <button class="btn btn-danger ml-1" (click)="onDeleteWorker(worker.id)">Удалить</button>
         </td>
       </tr>
     </tbody>

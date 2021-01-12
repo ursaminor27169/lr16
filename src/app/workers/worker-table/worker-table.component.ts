@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyWorker, MyWorkerType } from 'src/app/shared/models/myworkers.model'
 import { MyworkersService } from 'src/app/shared/services/myworkers.service'
 import { isNullOrUndefined } from 'util';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-worker-table',
   templateUrl: './worker-table.component.html',
@@ -16,7 +16,7 @@ export class WorkerTableComponent implements OnInit {
   add: number;
   nowDate = new Date();
 
-  constructor(private MyworkersService: MyworkersService) { }
+  constructor(private MyworkersService: MyworkersService, private router: Router) { }
 
   ngOnInit(): void {
     this.getData();
@@ -43,6 +43,24 @@ export class WorkerTableComponent implements OnInit {
       this.workers = isNullOrUndefined(await workers) ? [] : await workers;
     } catch (err) {
       console.error(err);
+    }
+  }
+
+  onAddWorker() {
+    this.router.navigate([this.router.url, 'edit']);
+  }
+
+  onEditWorker(id: number) {
+    this.router.navigate([this.router.url, 'edit', id]);
+  }
+
+  async onDeleteWorker(id: number) {
+    try {
+      await this.MyworkersService.deleteOneById(id);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      this.getData();
     }
   }
 
