@@ -1,4 +1,7 @@
 <h1 class="ml-3 mt-2 mb-3">Список сотрудников</h1>
+<div class="row my-3 mx-3">
+  <input type="text" class="col-6 form-control" [(ngModel)]="myStr" placeholder="Поиск по имени и фамилии">
+</div>
 <table class="table">
     <thead>
       <tr>
@@ -15,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let worker of workers">
+      <tr *ngFor="let worker of workers | myfilter:myStr">
         <th scope="row"> {{worker.id}} </th>
         <td> {{worker.surname}} </td>
         <td> {{worker.name}} </td>

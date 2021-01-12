@@ -15,6 +15,7 @@ export class WorkerTableComponent implements OnInit {
   department: string;
   add: number;
   nowDate = new Date();
+  myStr: string;
 
   constructor(private MyworkersService: MyworkersService, private router: Router) { }
 
