@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class WorkerTableComponent implements OnInit {
 
-  workers: MyWorker[];
+  workers: MyWorker[] = [];
   MyWorkerType = MyWorkerType;
   department: string;
   add: number;
   nowDate = new Date();
   myStr: string;
+  forFilter = 'idUp';
 
   constructor(private MyworkersService: MyworkersService, private router: Router) { }
 
@@ -63,6 +64,22 @@ export class WorkerTableComponent implements OnInit {
     } finally {
       this.getData();
     }
+  }
+
+  idUp() {
+    this.forFilter = 'idUp';
+  }
+
+  idDown() {
+    this.forFilter = 'idDown';
+  }
+
+  ageUp() {
+    this.forFilter = 'ageUp';
+  }
+
+  ageDown() {
+    this.forFilter = 'ageDown';
   }
 
 }

@@ -21,16 +21,6 @@
       "type": 0
     },
     {
-      "surname": "Sharonov",
-      "name": "Ilya",
-      "patronym": "Lvovich",
-      "phone": "+79275454816",
-      "email": "lion@mail.ru",
-      "birthday": "12.01.2000",
-      "type": 2,
-      "id": 3
-    },
-    {
       "surname": "Pavlikov",
       "name": "Akim",
       "patronym": "Andrevich",
@@ -39,6 +29,16 @@
       "birthday": "21.05.1998",
       "type": 3,
       "id": 4
+    },
+    {
+      "surname": "Efimova",
+      "name": "Aysha",
+      "patronym": "Yasharovna",
+      "phone": "+79275454819",
+      "email": "efimova@mail.ru",
+      "birthday": "05.02.1999",
+      "type": 2,
+      "id": 5
     }
   ]
 }
